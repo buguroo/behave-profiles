@@ -25,8 +25,10 @@ def the_profile(context, profile, encoding='utf-8'):
 
 
 def the_following_profiles(context, encoding='utf-8'):
-    if not context.table.ensure_column_exists("profile"):
-        raise RuntimeError("profile column is mandatory")
+    try:
+        context.table.require_column("profile")
+    except AssertionError as exc:
+        raise RuntimeError("profile column is mandatory") from exc
     else:
         for row in context.table:
             the_profile(context, row["profile"], encoding)
