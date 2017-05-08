@@ -78,10 +78,10 @@ If you end having to load multiple groups of profiles all the time you
 can make a group of profiles making a profile of... well profiles.
 
 Given the last example, you can make a new profile that loads those
-three profiles. This should be the code:
+three profiles. For example, you can name this new profile
+"fully_working_application.profile":
 
 .. code-block:: gherkin
-   :filename: fully_working_application.profile
 
    Given the following profiles
      | profiles                   |
