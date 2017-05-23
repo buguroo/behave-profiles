@@ -8,7 +8,7 @@ import os
 HERE = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(HERE, 'README.rst')).read()
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 
 setup(name='behave-profiles',
       version=VERSION,
